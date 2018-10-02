@@ -1,21 +1,53 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-   
+body {
+    /*google fonts*/
+    font-family: 'Lato';
+
+    background-image: url("../../si339/images/backgroundp.png")
 }
 
-li a {
-    float: left;
+/*navigation bar*/
+.main-nav {
+    display:flex;
+    display: -webkit-flex;  
+  
+    /*getting rid of bullet points in nav*/
+    list-style-type: none;
+    overflow:hidden;
+    text-align: center;
+    background-color: white;
+
+}
+
+.main-nav li:first-child {
+    margin-right: auto;
+}
+
+.main-nav a {
+    margin: 10px;
+    border-radius: 5px;
     display: block;
     color: grey;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 15px;
     text-decoration: none;
+}
+
+.main-nav .logo {
+  margin-left: -30px;
 }
 
 /* Change the text color to #111 (black) on hover */
 li a:hover {
     color: black;
 }
+
+/*image gallery using flex*/
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    display: -ms-flexbox; /* IE10 */
+    -ms-flex-wrap: wrap; /* IE10 */
+    -webkit-flex: wrap; /*chrome 21.0 & safari 6.1 */
+    opacity: .8;
+    
+}
+
