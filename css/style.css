@@ -14,7 +14,7 @@ body {
     list-style-type: none;
     overflow:hidden;
     text-align: center;
-    background-color: white;
+    
 
 }
 
@@ -26,7 +26,7 @@ body {
     margin: 10px;
     border-radius: 5px;
     display: block;
-    color: grey;
+    color: black;
     padding: 15px;
     text-decoration: none;
 }
@@ -37,7 +37,7 @@ body {
 
 /* Change the text color to #111 (black) on hover */
 li a:hover {
-    color: black;
+    color: #6689FD;
 }
 
 /*image gallery using flex*/
