@@ -2,6 +2,7 @@ body {
     /*google fonts*/
     font-family: 'Lato';
     background-image: url("../images/backgroundp.png")
+    fo
 }
 
 /*navigation bar*/
@@ -92,6 +93,9 @@ li a:hover {
     .row img {
         height: 150px;
     }
+    .main-nav {
+        font-size: 12px;
+    }
     
     
 }
@@ -104,6 +108,7 @@ li a:hover {
     .row img {
         height: 200px;
     }
+    
    
 }
 
