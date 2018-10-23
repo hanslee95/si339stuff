@@ -24,7 +24,7 @@ body {
 }
 
 .index-nav a {
-    margin: 30px;
+    margin: 10px;
     border-radius: 5px;
     display: block;
     color: purple;
@@ -95,6 +95,11 @@ li a:hover {
     }
     .main-nav {
         font-size: 12px;
+        
+    }
+    .index-nav {
+        font-size: 12px;
+        
     }
     
     
