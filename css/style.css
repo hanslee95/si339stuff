@@ -1,8 +1,39 @@
 body {
     /*google fonts*/
     font-family: 'Lato';
-
     background-image: url("../images/backgroundp.png")
+}
+
+/*navigation bar*/
+.index-nav {
+    display:flex;
+    display: -webkit-flex;  
+  
+    /*getting rid of bullet points in nav*/
+    list-style-type: none;
+    overflow:hidden;
+    text-align: center;
+    background: white;
+
+
+}
+
+.index-nav li:first-child {
+    margin-right: auto;
+}
+
+.index-nav a {
+    margin: 30px;
+    border-radius: 5px;
+    display: block;
+    color: purple;
+    padding: 2px;
+    text-decoration: none;
+   
+}
+
+.index-nav .logo {
+  margin-right: -30px;
 }
 
 /*navigation bar*/
@@ -40,6 +71,7 @@ li a:hover {
     color: #6689FD;
 }
 
+
 /*image gallery using flex*/
 .row{
     display: flex;
@@ -50,4 +82,72 @@ li a:hover {
     opacity: .8;
     
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (orientation: portrait) {
+    .row {
+        background: red;
+
+    }
+    .row img {
+        height: 150px;
+    }
+    
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .row {
+        background: green;
+    }
+    .row img {
+        height: 200px;
+    }
+   
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .row {
+        background: blue;
+    }
+    .row img {
+        height: 250px;
+    }
+    
+    
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .row {
+        background: orange;
+    }
+    .row img {
+        height: 300px;
+    }
+  
+    
+    
+    
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .row {
+        background: pink;
+    }
+    .row img {
+
+    }
+    
+        
+       
+    
+
+}
+
+
+
 
