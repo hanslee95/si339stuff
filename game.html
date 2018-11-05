@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Canvas Follow Mouse</title>
+  <style>
+    canvas {
+      border:1px solid #d3d3d3;
+      background-color: #f1f1f1;
+    }
+ 
+    body {
+      padding: 50px;
+    }
+  </style>
+</head>
+ 
+<body>
+  <canvas id="myCanvas" width="800px" height="500px"></canvas>
+ 
+  <script>
+  	// Defining the canvas of 800 x 500
+    var canvas = document.querySelector("#myCanvas");
+    var context = canvas.getContext("2d");
+
+    // updating mouse position and calling helper function
+    var canvasPos = getPosition(canvas);
+	var mouseX = 0;
+	var mouseY = 0;
+
+	// updating color of ink and size of pen when keys are pressed
+	var color = 'black'
+    var radius = 15;
+
+// ////////////////////////////////////// DRAW & MOUSE POSITION // //////////////////////////////////////
+    function draw() {
+  		context.beginPath();
+  		// circle shaped ink
+  		context.arc(mouseX, mouseY, radius, 0, 2 * Math.PI, true);
+  		context.fillStyle = color;
+  		context.fill();
+
+  		// keep going through animation to make a drawing.
+  		requestAnimationFrame(draw);
+	}
+
+	
+ 	
+
+	canvas.addEventListener("mousemove", setMousePosition, false);
+	
+
+
+	function setMousePosition(e) {
+  		mouseX = e.clientX - canvasPos.x;
+  		mouseY = e.clientY - canvasPos.y;
+  	}
+
+	draw();
+
+
+// ////////////////////////////////////// HELPER FUNCTION // //////////////////////////////////////
+	function getPosition(moving) {
+  	var startx = 0;
+  	var starty = 0;
+ 
+ 	// to adjust the mouseX and mouseY to figure out where we last saw the circle on the canvas. Returns the x and y positions
+ 	// of the element. Citation: I used Kirupa.com to help me figure out how to make the circles follow the mouse.
+  	while (moving) {
+    	startx += (moving.offsetLeft - moving.scrollLeft + moving.clientLeft);
+    	starty += (moving.offsetTop - moving.scrollTop + moving.clientTop);
+    	moving = moving.offsetParent;
+  	}
+  	return {
+    	x: startx,
+    	y: starty
+  	};
+}      
+
+
+
+// ////////////////////////////////////// KEY COMMANDS // //////////////////////////////////////
+
+	window.addEventListener("keydown", keyPress, false);
+
+	function keyPress(e) {
+		switch(e.keyCode) {
+        
+        	case 66: 
+        	// press b to turn ink blue
+            	color = 'blue'
+           
+            	break;
+
+        	case 71:
+        	// press g to turn ink green
+        		color = 'green'
+        	
+            	break;
+
+        	case 82:
+        	// press r to turn ink red
+        		color = 'red'
+            	break;
+
+	        case 89:
+	        // press y to turn ink yellow
+	        	color = 'yellow'
+	            break;
+
+	        case 38:
+	        	radius += 1;
+	        // press arrow up key to increase pen size
+
+	            break;
+
+	        case 40:
+	        // press arrow down key to decrease pen size
+	        	radius -= 1;
+	            break;    
+
+	        case 32:
+	        	context.clearRect(0, 0, canvas.width, canvas.height);
+	            // spacebar is pressed
+	            break;
+        }   
+    }
+	
+  </script>
+ 
+</body>
+ 
+</html>
