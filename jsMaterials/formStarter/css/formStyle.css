@@ -1,0 +1,42 @@
+input{
+	width: 35%;
+	position: absolute;
+	left: 150px;
+}
+label{
+	font-family: Cursive;
+}
+
+input:focus{
+	background-color:lightgrey;
+}
+
+fieldset{
+	width: 50%;
+}
+
+input[type=submit] {
+	margin-top:25px;
+    padding:5px 15px; 
+    background:#4a89c3; 
+    border:2px solid lightgrey;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    color:white;
+}
+
+form{
+	margin-bottom: 100px;
+}
+
+.fancy{
+	color: red;
+	font-family: Cursive;
+	border-radius: 10px;
+	border: 2px solid green;
+}
+
+p{
+	font-size: 150%;
+}

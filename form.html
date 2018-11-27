@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang= 'en'>
+<head>
+	<meta charset="utf-8">
+	<title>FORMS</title>
+	<style type='text/css'>
+
+
+	</style>
+</head>
+<body>
+	<form onsubmit = return 'check()'>
+		<label for = 'name'> Name: </label>
+		<input type="text" name = 'nm' id = 'name' value = 'Hans'><br>
+
+		<label>Email: <input type="email" name ='em' id = 'emaila'></label><br>
+		Email (confirm) <input type="email" name = 'em2' id = 'emailb' ><br>
+		Password <input type="password" name = 'pass'><br>
+		DOB: <input type = "date" name = 'dob'><br>
+		<input type = "submit" value = 'Click Me!'><br>
+	</form>
+
+	<script type = "text/javascript">
+		function check() {
+			var e1 = document.getElementByID('emaila').value;
+			var e2 = document.querySelector("#emailb").value;
+			if (e1 != e2) {
+				alert("Emails must match")
+				document.querySelector("#emailb").focus()
+				document.querySelector("#emailb").className = 'error'
+			}
+			else{
+
+				document.querySelector('')
+			}
+			return false;
+		}
+	</script>
+</body>
+</html>

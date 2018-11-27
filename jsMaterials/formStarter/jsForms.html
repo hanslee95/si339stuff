@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/formStyle.css">
+	<script type="text/javascript" src = "js/formJS.js"></script>
+	<style>
+	.fancy{
+		font-family: Cursive;
+		color: green;
+	}
+	</style>
+	</head>
+<body onload = "start()">
+	<form action="" method = "get">
+  	<fieldset>
+      <legend>Personal Information:</legend>
+      <label for="name">Name: </label>
+   	  <input type="text" name = "name"><br/>
+      <label for="email">Email: </label>
+      <input type="email" name = "e1" id = "e1"><br/>
+      <label for="confirm">Email (confirm): </label>
+      <input type="email" name = "confirm" id = "e2" onchange="checkEmail()"><br/>
+      <label for="birth">Date of Birth:</label>
+      <input type="date" name = "birth"><br/>
+	  <label for="pass">Password:</label>
+	  <input type = "password" name = "pass" id = "pass" onchange="checkPass()"><br/>
+  </fieldset>
+   <input type = "Submit" value = "Submit Me!">
+</form> 
+
+<p id = "notes" >Notes about this form:</p>
+<ol>
+<li>I used line breaks, but no CSS in the HTML</li>
+<li>The input field that is in focus has a different background color</li>
+<li>When I click on submit the page should stay the same, but I should see the data on the top.</li>
+
+<script>
+  document.getElementById('notes').innerHTML += "--IMPORTANT!";  
+  document.getElementById('notes').className += "fancy";
+ </script>
+
+</body>
+</html>
+
