@@ -71,9 +71,7 @@ li a:hover {
     color: #1700FF;
 }
 
-li a:clicked {
-    color: #1700FF;
-}
+
 
 
 /*image gallery using flex*/
@@ -85,6 +83,7 @@ li a:clicked {
     -webkit-flex: wrap; /*chrome 21.0 & safari 6.1 */
     justify-content: center;
     align-items: center;
+
 }
 
 
