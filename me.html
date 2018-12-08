@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <title>Hans Lee Portfolio</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -15,13 +15,27 @@
 
 </head>
 
+
+
+<!-- Creator a clear selector feeling so users know that these images are clickable -->
+<script>
+	$(document).ready(function(){
+    	$("img").hover(function(){
+        	$(this).css("opacity", .5);
+        	}, function(){
+        	$(this).css("opacity", 1);
+    	});
+	});
+   
+</script>
+
 <body>
 	<ul class='main-nav'>
 		<li><a href="index.html" class="logo"><img src = "images/logo.png" alt = "photo of logo" height = "40"></a></li>
 
   		<li><a href="index.html">Bio</a></li>
  		<li><a href="pets.html">Pets</a></li>
-  		<li><a href="me.html">Me</a></li>
+  		<li><a class = 'active' href="me.html">Me</a></li>
   		<li><a href="digital.html">Digital</a></li>
 	</ul>
 	<h1> ME </h1>
@@ -29,37 +43,39 @@
 	
 
 
-	<div class = "gallery">
-		
 
-				<a href="images/m1.png" data-lightbox = 'm1.png' data-title="AfterParty" alt = 'photo of hans' ><img src="images/m1.png" height = 300></a>
-				<a href="images/m2.png" data-lightbox = 'm2.png' data-title="PianoTwinz" alt = 'photo of hans' ><img src="images/m2.png" height = 300></a>
-				<a href="images/m3.png" data-lightbox = 'm3.png' data-title="GQ" alt = 'photo of hans' ><img src="images/m3.png" height = 300></a>
-				<a href="images/m4.png" data-lightbox = 'm4.png' data-title="Jumper" alt = 'photo of hans' ><img src="images/m4.png" height = 300></a>
-				<a href="images/m5.png" data-lightbox = 'm5.png' data-title="Winter Album" alt = 'photo of hans' ><img src="images/m5.png" height = 300></a>
-				<a href="images/m6.png" data-lightbox = 'm6.png' data-title="Wolfpack" alt = 'photo of hans' ><img src="images/m6.png" height = 300></a>
-				<a href="images/m7.png" data-lightbox = 'm7.png' data-title="Urban" alt = 'photo of hans' ><img src="images/m7.png" height = 300></a>
-				<a href="images/m8.png" data-lightbox = 'm8.png' data-title="Summer Again" alt = 'photo of hans' ><img src="images/m8.png" height = 300></a>
-				<a href="images/m9.png" data-lightbox = 'm9.png' data-title="Be Water, My Friend" alt = 'photo of hans' ><img src="images/m9.png" height = 300></a>
-				<a href="images/m10.png" data-lightbox = 'm10.png' data-title="Cloud Factory" alt = 'photo of hans' ><img src="images/m10.png" height = 300></a>
-				<a href="images/m11.png" data-lightbox = 'm11.png' data-title="Korean Cafe" alt = 'photo of hans' ><img src="images/m11.png" height = 300></a>
-	
+
+<a class="skip-main" href="#main">Skip to photos!</a>
+	<div class = "container" id='main' tabindex='-1' align= 'middle'>
+		
+		<a href="images/m1.png" data-lightbox = 'm1.png' data-title="AfterParty" alt = 'photo of hans' ><img src="images/m1.png" height = 300></a>
+		<a href="images/m2.png" data-lightbox = 'm2.png' data-title="PianoTwinz" alt = 'photo of hans' ><img src="images/m2.png" height = 300></a>
+		<a href="images/m3.png" data-lightbox = 'm3.png' data-title="GQ" alt = 'photo of hans' ><img src="images/m3.png" height = 300></a>
+		<a href="images/m4.png" data-lightbox = 'm4.png' data-title="Jumper" alt = 'photo of hans' ><img src="images/m4.png" height = 300></a>
+		<a href="images/m5.png" data-lightbox = 'm5.png' data-title="Winter Album" alt = 'photo of hans' ><img src="images/m5.png" height = 300></a>
+		<a href="images/m6.png" data-lightbox = 'm6.png' data-title="Wolfpack" alt = 'photo of hans' ><img src="images/m6.png" height = 300></a>
+		<a href="images/m7.png" data-lightbox = 'm7.png' data-title="Urban" alt = 'photo of hans' ><img src="images/m7.png" height = 300></a>
+		<a href="images/m8.png" data-lightbox = 'm8.png' data-title="Summer Again" alt = 'photo of hans' ><img src="images/m8.png" height = 300></a>
+		<a href="images/m9.png" data-lightbox = 'm9.png' data-title="Be Water, My Friend" alt = 'photo of hans' ><img src="images/m9.png" height = 300></a>
+		<a href="images/m10.png" data-lightbox = 'm10.png' data-title="Cloud Factory" alt = 'photo of hans' ><img src="images/m10.png" height = 300></a>
+		<a href="images/m11.png" data-lightbox = 'm11.png' data-title="Korean Cafe" alt = 'photo of hans' ><img src="images/m11.png" height = 300></a>
 	</div>
-	
-		
+
+
+	<footer>
+		<ul class="social">
+			<li><a href="https://dribbble.com/hanslee95" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+			<li><a href="https://www.behance.net/hanheum238a" target="_blank"><i class="fa fa-behance"></i></a></li>
+			<li><a href="https://www.instagram.com/show_me_your_hans/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a></li>
+			<li><a href="https://www.facebook.com/hando.lee" target="_blank"><i class="fa fa-facebook"></i></a></li>
+		</ul>
+	</footer>
 
 
 
-	<script src="https://unpkg.com/web-animations-js@2.3.1/web-animations.min.js"></script>
-	<script src="https://unpkg.com/hammerjs@2.0.8/hammer.min.js"></script>
-	<script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"></script>
-	<script src="js/drag.js"></script>
-
-
-
-	
 
 
 </body>
+
 
 </html>

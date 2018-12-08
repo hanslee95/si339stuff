@@ -3,9 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <title>Hans Lee Portfolio</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel='stylesheet' href="css/lightbox.css">
+<!-- <link rel='stylesheet' type='text/css' href="css/drag.css"> -->
+<script src="js/lightbox.js"></script>
+
+
 </head>
+
+
+
+<!-- Creator a clear selector feeling so users know that these images are clickable -->
+<script>
+	$(document).ready(function(){
+    	$("img").hover(function(){
+        	$(this).css("opacity", .5);
+        	}, function(){
+        	$(this).css("opacity", 1);
+    	});
+	});
+   
+</script>
+
+
 
 <body>
 	<ul class='main-nav'>
@@ -14,18 +38,69 @@
   		<li><a href="index.html">Bio</a></li>
  		<li><a href="pets.html">Pets</a></li>
   		<li><a href="me.html">Me</a></li>
-  		<li><a href="digital.html">Digital</a></li>
+  		<li><a class = "active" href="digital.html">Digital</a></li>
 	</ul>
 	<h1> DIGITAL </h1>
 	<p> As a UI/UX Designer, I always have a passion for creating cool graphic art and putting them out there on Behance. Here are a few that I've done over the past year! Enjoy! <p>
 
-	<img src = "images/d1.png" alt ="photo of hans" height= 300>
-	<img src = "images/d2.png" alt ="photo of hans" height= 300>
-	<img src = "images/d3.png" alt ="photo of hans" height= 300>
-	<img src = "images/d4.png" alt ="photo of hans" height= 300>
+
+<a class="skip-main" href="#main">Skip to photos!</a>
+
+
 	
+
+
+
+
+	<div class = "container" id='main' tabindex='-1' align= 'middle'>
+		
+		<a href="images/d1.png" data-lightbox = 'd1.png' data-title="Data Viz Isometric" alt = 'Isometric' ><img src="images/d1.png" height = 300></a>
+
+		<a href="images/d2.png" data-lightbox = 'd2.png' data-title="Favicon" alt = 'favicon' ><img src="images/d2.png" height = 300></a>
+
+		<a href="images/d3.png" data-lightbox = 'd3.png' data-title="Synesthesia" alt = 'Synesthesia' ><img src="images/d3.png" height = 300></a>
+
+		<a href="images/d4.png" data-lightbox = 'd4.png' data-title="Congrats on 20, Fed!" alt = 'Roger Federer' ><img src="images/d4.png" height = 300></a>
+
+
+		<a href="images/d5.png" data-lightbox = 'd5.png' data-title="Hulu Redesign" alt = 'Hulu Redesign' ><img src="images/d5.png" height = 300></a>
+
+		<a href="images/d6.png" data-lightbox = 'd6.png' data-title="Mountain Logo" alt = 'Mountain Logo' ><img src="images/d6.png" height = 300></a>
+
+		<a href="images/d7.png" data-lightbox = 'd7.png' data-title="Detroit Labs" alt = 'Detroit Labs' ><img src="images/d7.png" height = 300></a>
+
+		<a href="images/d8.png" data-lightbox = 'd8.png' data-title="Detroit Labs" alt = 'Detroit Labs' ><img src="images/d8.png" height = 300></a>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<footer> 
+	<ul class="social" align= 'middle'>
+		<li><a href="https://dribbble.com/hanslee95" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+		<li><a href="https://www.behance.net/hanheum238a" target="_blank"><i class="fa fa-behance"></i></a></li>
+		<li><a href="https://www.instagram.com/show_me_your_hans/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a></li>
+		<li><a href="https://www.facebook.com/hando.lee" target="_blank"><i class="fa fa-facebook"></i></a></li>
+	</ul>
+</footer>
 
 
 </body>
 
 </html>
+
+
+
+

@@ -1,62 +1,40 @@
 
+h1, h2 {
+    color: white;
 
-/*///////Light box/////////*/
-.gallery{
 
-    width: 95%;
-    border: 2px solid black;
-    margin:0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 10px;
+    text-align: center;
 }
 
-.gallery img{
-    width: 100%;
+li a.active {
+    font-weight: bold;
+    color: black;
 }
 
-.item{
-    border: 2px solid black;
+
+/*//////////////////////////////////////*/
+
+/*Center of me photos*/
+.me-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
+
+
+
+
 
 body {
     /*google fonts*/
     font-family: 'Lato';
-    background-image: url("../images/backgroundp.png")
-    fo
+    background-image: url("../images/bi.png")
+
+    
 }
 
-/*navigation bar*/
-.index-nav {
-    display:flex;
-    display: -webkit-flex;  
-  
-    /*getting rid of bullet points in nav*/
-    list-style-type: none;
-    overflow:hidden;
-    text-align: center;
-    background: white;
 
-
-}
-
-.index-nav li:first-child {
-    margin-right: auto;
-}
-
-.index-nav a {
-    margin: 10px;
-    border-radius: 5px;
-    display: block;
-    color: purple;
-    padding: 2px;
-    text-decoration: none;
-   
-}
-
-.index-nav .logo {
-  margin-right: -30px;
-}
 
 /*navigation bar*/
 .main-nav {
@@ -79,7 +57,7 @@ body {
     margin: 10px;
     border-radius: 5px;
     display: block;
-    color: black;
+    color: white;
     padding: 15px;
     text-decoration: none;
 }
@@ -90,37 +68,66 @@ body {
 
 /* Change the text color to #111 (black) on hover */
 li a:hover {
-    color: #6689FD;
+    color: #000000;
+}
+
+li a:clicked {
+    color: #000000;
 }
 
 
 /*image gallery using flex*/
-.row{
+.container{
     display: flex;
     flex-wrap: wrap;
     display: -ms-flexbox; /* IE10 */
     -ms-flex-wrap: wrap; /* IE10 */
     -webkit-flex: wrap; /*chrome 21.0 & safari 6.1 */
-    opacity: .8;
-    
+    justify-content: center;
+    align-items: center;
 }
 
+
+
+
+/*Let's make it responsive!*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (orientation: portrait) {
-    .row {
-        background: red;
+    
+    /*for me page photo size*/
+    .container img {
+        height : 150px;
+    }
 
-    }
-    .row img {
-        height: 150px;
-    }
+ 
     .main-nav {
         font-size: 12px;
         
     }
-    .index-nav {
-        font-size: 12px;
-        
+    
+
+    p {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    /*This is for the footer icons (behance...)*/
+    .social {
+        list-style-type: none;
+        text-align: center;
+    }
+    .social li {
+        display: inline;
+    }
+    .social i {
+        font-size: 200%;
+        margin: 1% 5% 7% 4%;
+        color:#ffffff;
+    }
+    .social i:hover {
+        color: #000000;
     }
     
     
@@ -128,23 +135,76 @@ li a:hover {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .row {
-        background: green;
+    
+    /*for me page photo size*/
+    .container img {
+        height : 200px;
     }
-    .row img {
-        height: 200px;
+
+
+    /*for bio paragraph*/
+    p {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
+
+    /*This is for the footer icons (behance...)*/
+    .social {
+        list-style-type: none;
+        text-align: center;
+    }
+    .social li {
+        display: inline;
+    }
+    .social i {
+        font-size: 270%;
+        margin: 1% 5% 7% 4%;
+        color:#ffffff;
+    }
+    .social i:hover {
+        color: #000000;
+    }
+
+
+   
     
    
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .row {
-        background: blue;
+    
+    /*for me page photo size*/
+    .container img {
+        height : 250px;
     }
-    .row img {
-        height: 250px;
+
+   
+
+    p {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    /*This is for the footer icons (behance...)*/
+    .social {
+        list-style-type: none;
+        text-align: center;
+    }
+    .social li {
+        display: inline;
+    }
+    .social i {
+        font-size: 270%;
+        margin: 1% 5% 7% 4%;
+        color:#ffffff;
+    }
+    .social i:hover {
+        color: #000000;
     }
     
     
@@ -152,30 +212,75 @@ li a:hover {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .row {
-        background: orange;
+
+    /*for me page photo size*/
+    .container img {
+        height : 300px;
+        
     }
-    .row img {
-        height: 300px;
+
+   
+
+    p {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    /*This is for the footer icons (behance...)*/
+    .social {
+        list-style-type: none;
+        text-align: center;
+    }
+    .social li {
+        display: inline;
+    }
+    .social i {
+        font-size: 270%;
+        margin: 1% 5% 7% 4%;
+        color:#ffffff;
+    }
+    .social i:hover {
+        color: #000000;
     }
   
-    
-    
     
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .row {
-        background: pink;
-    }
-    .row img {
+ 
 
+    p {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
-    
-        
-       
-    
+
+
+    /*This is for the footer icons (behance...)*/
+    .social {
+        list-style-type: none;
+        text-align: center;
+    }
+    .social li {
+        display: inline;
+    }
+    .social i {
+        font-size: 270%;
+        margin: 1% 5% 7% 4%;
+        color:#ffffff;
+    }
+    .social i:hover {
+        color: #000000;
+    }
+
+    footer {
+        height: 60px;
+    }
+
 
 }
 

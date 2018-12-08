@@ -4,33 +4,71 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hans Lee Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="img/camera-icon.png"/>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<!-- this js file is for photos lightbox -->
+<script src="js/lightbox-plus-jquery.min.js"></script>	
+
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
+
+<script>
+	$(document).ready(function() {
+    	$("h1").hide().fadeIn(2000);
+    	$("h2").hide().fadeIn(2300);
+    	$(".me-photo").hide().fadeIn(2600);
+    	$("p").hide().fadeIn(2900);
+   
+	});
+
+</script>
+
+
 <body>
-	<ul class='index-nav'>
+	<ul class='main-nav'>
+
 		<li><a href="index.html" class="logo"><img src = "images/logo.png" alt = "photo of logo" height = "40"></a></li>
 
-  		<li><a href="index.html">Bio</a></li>
+
+  		<li><a href="index.html" class= "active">Bio</a></li>
  		<li><a href="pets.html">Pets</a></li>
   		<li><a href="me.html">Me</a></li>
   		<li><a href="digital.html">Digital</a></li>
 	</ul>
-	<h1> HANS LEE PHOTOGRAPHY & DIGITAL ART </h1>
-	<h2> About </h2>
-	<img src = "images/bio.png" alt ="photo of hans">
 
-	<p> Hey You!<p>
-	<p> My name is Hans Lee and I would like to welcome you to my Photography | Design portfolio. By day, I am a UX Designer working on my craft. By night and free time, I capture moments in my life through an artsy, digital, and cool say! I also love designing creative, digital artwork to help sharpen my UI skills. This is a soft skill of mine that I really want to grow! Throughout my portfolio, please enjoy my two golden retrievers, Mookie and Dewey! Also, enjoy my hobbies and other random, cool captures I think are awesome. <p>
+	
+	<h1> HANS LEE PHOTOGRAPHY & DIGITAL ART </h1>
+
+	<h2> Hey You! </h2>
+	<a class="skip-main" href="#main"><p>Skip to bio!</p></a>
+
+	
+
+	<img src = "images/bio.png" alt ="photo of hans" class= "me-photo">
+
+
+
+	<p id='main' tabindex='-1'> My name is Hans Lee and I would like to welcome you to my Photography | Design portfolio. By day, I am a UX Designer working on my craft. By night and free time, I capture moments in my life through an artsy, digital, and cool way! I also love designing creative and digital artwork to help sharpen my UI skills. This is a soft skill of mine that I really want to grow! Throughout my portfolio, please enjoy my two golden retrievers, Mookie and Dewey! Also, enjoy my hobbies and other random, cool captures I think are awesome. <p>
 	<p> Thank you in advance for visiting my site!<p>
-	<p> Hans Lee <p>	
-	<p> Contact <p>	
-	<ul class = 'contact-nav'>
-  		<li><a href="https://www.behance.net/hanheum238a">Behance</a></li>
- 		<li><a href="https://www.linkedin.com/feed/">LinkedIn</a></li>
-  		<li><a href="https://www.instagram.com/hanslee.ux/">Instagram</a></li>
-  		<li><a href="https://www.hanheum.info/">UX Portfolio</a></li>
-	</ul>	
+	<p> Hans Lee <p> <br>	
+	
+
+
+
+<footer>
+	<ul class="social">
+		<li><a href="https://dribbble.com/hanslee95" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+		<li><a href="https://www.behance.net/hanheum238a" target="_blank"><i class="fa fa-behance"></i></a></li>
+		<li><a href="https://www.instagram.com/show_me_your_hans/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a></li>
+		<li><a href="https://www.facebook.com/hando.lee" target="_blank"><i class="fa fa-facebook"></i></a></li>
+	</ul>
+</footer>
+
 
 
 </body>
