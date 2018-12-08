@@ -1,5 +1,5 @@
 
-h1, h2 {
+h1, h2, .skip-main{
     color: white;
 
 
@@ -29,7 +29,7 @@ li a.active {
 body {
     /*google fonts*/
     font-family: 'Lato';
-    background-image: url("../images/bi.png")
+    background-image: url("../images/background.png")
 
     
 }
