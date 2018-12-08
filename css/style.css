@@ -1,6 +1,6 @@
 
 h1, h2, .skip-main{
-    color: white;
+    color: #1700FF;
 
 
     text-align: center;
@@ -8,7 +8,7 @@ h1, h2, .skip-main{
 
 li a.active {
     font-weight: bold;
-    color: black;
+    color: #1700FF;
 }
 
 
@@ -57,7 +57,7 @@ body {
     margin: 10px;
     border-radius: 5px;
     display: block;
-    color: white;
+    color: black;
     padding: 15px;
     text-decoration: none;
 }
@@ -68,11 +68,11 @@ body {
 
 /* Change the text color to #111 (black) on hover */
 li a:hover {
-    color: #000000;
+    color: #1700FF;
 }
 
 li a:clicked {
-    color: #000000;
+    color: #1700FF;
 }
 
 
@@ -127,7 +127,7 @@ li a:clicked {
         color:#ffffff;
     }
     .social i:hover {
-        color: #000000;
+        color: #1700FF;
     }
     
     
@@ -164,7 +164,7 @@ li a:clicked {
         color:#ffffff;
     }
     .social i:hover {
-        color: #000000;
+        color: #1700FF;
     }
 
 
@@ -204,7 +204,7 @@ li a:clicked {
         color:#ffffff;
     }
     .social i:hover {
-        color: #000000;
+        color: #1700FF;
     }
     
     
@@ -242,7 +242,7 @@ li a:clicked {
         color:#ffffff;
     }
     .social i:hover {
-        color: #000000;
+        color: #1700FF;
     }
   
     
@@ -271,10 +271,10 @@ li a:clicked {
     .social i {
         font-size: 270%;
         margin: 1% 5% 7% 4%;
-        color:#ffffff;
+        color:#000000;
     }
     .social i:hover {
-        color: #000000;
+        color: #1700FF;
     }
 
     footer {
