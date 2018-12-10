@@ -1,3 +1,9 @@
+#lg{
+    
+    font-weight: bold;
+}
+
+
 
 h1, h2, .skip-main{
     color: #1700FF;
@@ -91,7 +97,20 @@ li a:hover {
 /*Let's make it responsive!*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (orientation: portrait) {
+   
+
+
+    #sm{
+  
+       
+        font-weight: bold;
+    }
+
+   
+
     
+
+
     /*for me page photo size*/
     .container img {
         height : 150px;
@@ -133,6 +152,12 @@ li a:hover {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+   
+
+    #sm{
+  
+        display: none;
+    }
     
     /*for me page photo size*/
     .container img {
@@ -210,6 +235,10 @@ li a:hover {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    #sm{
+  
+        display: none;
+    }
 
     /*for me page photo size*/
     .container img {
@@ -248,7 +277,9 @@ li a:hover {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
- 
+    #sm{
+        display: none;
+    }
 
     p {
         width: 600px;
@@ -278,6 +309,10 @@ li a:hover {
     footer {
         height: 60px;
     }
+
+    
+
+   
 
 
 }
