@@ -15,6 +15,9 @@
 	<!-- end -->
 <link rel="stylesheet" href="css/lightbox.min.css">
 
+<!-- motions!!! -->
+<link rel="stylesheet" href="css/test.css">
+
 
 </head>
 
@@ -57,8 +60,30 @@
 
 
 
+<div class= 'all'>
+	<div class="w">
+  		<div class="ts">
+    		<input type="radio" id="c1" name="ts" checked="checked"/>
+    		<label class="t" for="c1"><img src="images/motion2.gif" alt="dogs"/></label>
+    		<input type="radio" id="c2" name="ts"/>
+    		<label class="t" for="c2"><img src="images/motion3.gif" alt="dogs"/></label>
+	    	<input type="radio" id="c3" name="ts"/>
+	    	<label class="t" for="c3"><img src="images/motion4.gif" alt="dogs"/></label>
+	    	<input type="radio" id="c4" name="ts"/>
+	    	<label class="t" for="c4"><img src="images/motion5.gif" alt="dogs"/></label>
+	    	<input type="radio" id="c5" name="ts"/>
+	    	<label class="t" for="c5"><img src="images/motion6.gif" alt="dogs"/></label>	
+	  	</div>
+	  	
+	
+	  	
+	</div>
+
+</div>
+
 
 	<div class = "container" id='main' tabindex='-1'>
+
 
 		<a class="example-image-link" id="lightbox-img10" href="images/p1.png" aria-label="dogs" data-alt = 'dogs' data-lightbox="example-set" data-title="selfie"><img class="example-image" src="images/p1.png" alt="dogs"></a>
 
@@ -81,6 +106,8 @@
 		<a class="example-image-link" id="lightbox-img1" href="images/p10.png" aria-label="dogs" data-alt = 'dogs' data-lightbox="example-set" data-title="Sisters"><img class="example-image" src="images/p10.png" alt="dogs"></a>
 	</div>
 
+	
+
 </main>
 
 
@@ -101,8 +128,35 @@
         	$(this).css("opacity", 1);
     	});
 	});
-   
+
 </script>
+
+<script>
+	const els = document.querySelectorAll("[type='radio']");
+for (const el of els)
+  el.addEventListener("input", e => reorder(e.target, els));
+reorder(els[0], els);
+
+function reorder(targetEl, els) {
+  const nItems = els.length;
+  let processedUncheck = 0;
+  for (const el of els) {
+    const containerEl = el.nextElementSibling;
+    if (el === targetEl) {//checked radio
+      containerEl.style.setProperty("--w", "100%");
+      containerEl.style.setProperty("--l", "0");
+    }
+    else {//unchecked radios
+      containerEl.style.setProperty("--w", `${100/(nItems-1)}%`);
+      containerEl.style.setProperty("--l", `${processedUncheck * 100/(nItems-1)}%`);
+      processedUncheck += 1;
+    }
+  }
+}
+
+</script>
+
+
 
 
 	
