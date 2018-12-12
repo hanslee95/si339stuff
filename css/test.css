@@ -1,3 +1,5 @@
+fieldset{ border: none;}
+
 .all  {
   display:flex;
   place-content:center;
