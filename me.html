@@ -20,6 +20,9 @@
 	
 <link rel="stylesheet" href="css/lightbox.min.css">
 
+<!-- motions!!! -->
+<link rel="stylesheet" href="css/test.css">
+
 
 </head>
 
@@ -50,6 +53,28 @@
 	<p> Cool photos of other stuff rather than my dogs lol. These are photos I think are cool and artsy! <p>
 
 	<a class="skip-main" href="#main">Skip to photos!</a>
+
+
+<div class= 'all'>
+	<div class="w">
+  		<div class="ts">
+  			<fieldset>
+	  			<legend>
+		    		<input type="radio" id="c1" name="ts" checked="checked"/>
+		    		<label class="t" for="c1"><img src="images/move1.gif" alt="me"/></label>
+		    		<input type="radio" id="c2" name="ts"/>
+		    		<label class="t" for="c2"><img src="images/move2.gif" alt="me"/></label>
+			    	<input type="radio" id="c3" name="ts"/>
+			    	<label class="t" for="c3"><img src="images/move3.gif" alt="me"/></label>
+			    	<input type="radio" id="c4" name="ts"/>
+			    	<label class="t" for="c4"><img src="images/move4.gif" alt="me"/></label>
+			    	<input type="radio" id="c5" name="ts"/>
+			    	<label class="t" for="c5"><img src="images/move5.gif" alt="me"/></label>	
+	    		</legend>
+	    	</fieldset>
+	  	</div>
+	</div>
+</div>
 
 
 
@@ -102,6 +127,31 @@
     	});
 	});
    
+</script>
+
+<script>
+	const els = document.querySelectorAll("[type='radio']");
+for (const el of els)
+  el.addEventListener("input", e => reorder(e.target, els));
+reorder(els[0], els);
+
+function reorder(targetEl, els) {
+  const nItems = els.length;
+  let processedUncheck = 0;
+  for (const el of els) {
+    const containerEl = el.nextElementSibling;
+    if (el === targetEl) {//checked radio
+      containerEl.style.setProperty("--w", "100%");
+      containerEl.style.setProperty("--l", "0");
+    }
+    else {//unchecked radios
+      containerEl.style.setProperty("--w", `${100/(nItems-1)}%`);
+      containerEl.style.setProperty("--l", `${processedUncheck * 100/(nItems-1)}%`);
+      processedUncheck += 1;
+    }
+  }
+}
+
 </script>
 
 </body>
