@@ -160,7 +160,9 @@ class Cursor {
 
 }
 
-const _cursor = new Cursor()
+if (!window.matchMedia("(max-width: 700px)").matches) {
+  const _cursor = new Cursor()
+}
 </script>
 
 

@@ -49,6 +49,8 @@
 
 
 <main>
+
+
 	<h1> ME </h1>
 	<p> Cool photos of other stuff rather than my dogs lol. These are photos I think are cool and artsy! <p>
 
@@ -101,6 +103,10 @@
 
 		<a class="example-image-link" id="lightbox-img12" href="images/m11.png" aria-label="me" data-alt = 'me' data-lightbox="example-set" data-title="Korean Cafe"><img class="example-image" src="images/m11.png" alt="me"></a>	
 	</div>
+
+
+
+
 </main>
 
 
@@ -184,6 +190,7 @@ class Cursor {
     }
 
     initCss() {
+
         const style_cursor = { position: 'fixed', borderRadius: '50%', transform: 'translateX(-50%) translateY(-50%)', pointerEvents: 'none', left: '100px', top: '50%' }
         const style_cursor_1 = { backgroundColor: 'blue', height: '7px', width: '7px', zIndex: 99999 }
         const style_cursor_2 = { mixBlendMode: 'overlay', border: '2px solid blue', height: ' 30px', width: '30px', zIndex: 99998, webkitTransition: 'all 0.3s ease-out', mozTransition: 'all 0.3s ease-out', oTransition: 'all 0.3s ease-out', msTransition: 'all 0.3s ease-out', transition: 'all 0.3s ease-out' }
@@ -211,8 +218,23 @@ class Cursor {
 
 }
 
-const _cursor = new Cursor()
+
+
+if (!window.matchMedia("(max-width: 700px)").matches) {
+  const _cursor = new Cursor()
+}
+
+
+
+
+
+
 </script>
+
+
+
+
+
 
 </body>
 </html>
